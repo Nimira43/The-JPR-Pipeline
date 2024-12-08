@@ -1,0 +1,18 @@
+# Binaries for programs and plugins
+*.exe
+*.so
+*.dylib
+*.dll
+
+# Executable-only binaries and libraries
+/Cargo.lock
+/target
+
+# Dump file for unhandled panics
+*.stackdump
+
+# Folders
+**/target/**
+
+# Logs
+*.log
