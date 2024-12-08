@@ -11,4 +11,5 @@ rust_process = subprocess.Popen(
 rust_output, _ = rust_process.communicate(input = json.dumps(data).encode())
 
 # Deserialise the Rust output
-result = json.loads(rust_output.decode()) print('Results from Rust:', result)
+result = json.loads(rust_output.decode()) 
+print('Results from Rust:', result)
