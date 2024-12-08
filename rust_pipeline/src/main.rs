@@ -9,4 +9,9 @@ fn main() {
 
     // Parse JSON input
     let data: Value = serde_json::from_str(&input).expect("Failed to parse JSON");
+
+    // Perform computation (eg - calculate mean of X values)
+    let x_values: Vec<f64> = data.as_array().unwrap().iter().map(|v| v["x"].as_f64().unwrap()).collect();
+    let sum: f64 = x_values.iter().sum();
+    let mean_x: f64 = sum / x_values.len() as f64;
 }
