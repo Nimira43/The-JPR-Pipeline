@@ -18,5 +18,7 @@ fn main() {
     //Serialise result to JSON
     let result = json!({ "mean_x": mean_x });
     let result_str = serde_json::to_string(&result).expect("Failed to serialise JSON");
-    
+
+    // Write result to stdout 
+    io::stdout().write_all(result_str.as_bytes()).expect("Failed to write output");
 }
